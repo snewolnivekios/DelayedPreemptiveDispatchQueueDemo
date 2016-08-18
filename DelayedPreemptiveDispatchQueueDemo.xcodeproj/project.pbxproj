@@ -13,6 +13,8 @@
 		DCFEB82E1D64085700E5B79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFEB82D1D64085700E5B79B /* Assets.xcassets */; };
 		DCFEB8311D64085700E5B79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCFEB82F1D64085700E5B79B /* LaunchScreen.storyboard */; };
 		DCFEB83C1D64085700E5B79B /* DelayedPreemptiveDispatchQueueDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFEB83B1D64085700E5B79B /* DelayedPreemptiveDispatchQueueDemoTests.swift */; };
+		DCFEB84C1D64090500E5B79B /* DelayedPreemptiveDispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFEB84A1D64090500E5B79B /* DelayedPreemptiveDispatchQueue.swift */; };
+		DCFEB84D1D64090500E5B79B /* ProgressViewTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFEB84B1D64090500E5B79B /* ProgressViewTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		DCFEB8371D64085700E5B79B /* DelayedPreemptiveDispatchQueueDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DelayedPreemptiveDispatchQueueDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFEB83B1D64085700E5B79B /* DelayedPreemptiveDispatchQueueDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedPreemptiveDispatchQueueDemoTests.swift; sourceTree = "<group>"; };
 		DCFEB83D1D64085700E5B79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCFEB84A1D64090500E5B79B /* DelayedPreemptiveDispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayedPreemptiveDispatchQueue.swift; sourceTree = "<group>"; };
+		DCFEB84B1D64090500E5B79B /* ProgressViewTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressViewTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		DCFEB8251D64085700E5B79B /* DelayedPreemptiveDispatchQueueDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DCFEB84A1D64090500E5B79B /* DelayedPreemptiveDispatchQueue.swift */,
+				DCFEB84B1D64090500E5B79B /* ProgressViewTimer.swift */,
 				DCFEB8261D64085700E5B79B /* AppDelegate.swift */,
 				DCFEB8281D64085700E5B79B /* ViewController.swift */,
 				DCFEB82A1D64085700E5B79B /* Main.storyboard */,
@@ -202,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFEB8291D64085700E5B79B /* ViewController.swift in Sources */,
+				DCFEB84C1D64090500E5B79B /* DelayedPreemptiveDispatchQueue.swift in Sources */,
 				DCFEB8271D64085700E5B79B /* AppDelegate.swift in Sources */,
+				DCFEB84D1D64090500E5B79B /* ProgressViewTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VDA563725K;
 				INFOPLIST_FILE = DelayedPreemptiveDispatchQueueDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinlowens.ios.DelayedPreemptiveDispatchQueueDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -356,6 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VDA563725K;
 				INFOPLIST_FILE = DelayedPreemptiveDispatchQueueDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kevinlowens.ios.DelayedPreemptiveDispatchQueueDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

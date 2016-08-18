@@ -1,26 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11191" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11156"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DelayedPreemptiveDispatchQueueDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delayed Preemptive Dispatch Demo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6te-jW-cgz">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="BjB-IV-V18"/>
+                                    <constraint firstAttribute="width" constant="200" id="N0Y-Gk-sBi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Re-Va-oSO">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-ii-tAQ">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qol-4g-rm5">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="4uK-jN-KLa"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2s" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1r-l5-0HI">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4uK-jN-KLa" firstAttribute="leading" secondItem="Xb0-ii-tAQ" secondAttribute="leading" id="Mhg-UW-J9B"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qol-4g-rm5" secondAttribute="trailing" id="RTh-WT-MES"/>
+                                            <constraint firstItem="Qol-4g-rm5" firstAttribute="leading" secondItem="Xb0-ii-tAQ" secondAttribute="leading" id="V8z-BK-oji"/>
+                                            <constraint firstAttribute="trailing" secondItem="q1r-l5-0HI" secondAttribute="trailing" id="cTL-3i-u4N"/>
+                                            <constraint firstItem="q1r-l5-0HI" firstAttribute="leading" secondItem="Xb0-ii-tAQ" secondAttribute="leading" id="nJO-6t-f8i"/>
+                                            <constraint firstAttribute="trailing" secondItem="4uK-jN-KLa" secondAttribute="trailing" id="wg4-Co-p7P"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QiU-jb-wec">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nal-bC-TKd">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="slw-ox-HrN"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Pd-wh-gaP">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ9-Ey-j6P">
+                                                        <state key="normal" title="Submit Task"/>
+                                                        <connections>
+                                                            <action selector="submitTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v5f-7c-5LB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bs7-ed-HWB">
+                                                        <state key="normal" title="Cancel Task"/>
+                                                        <connections>
+                                                            <action selector="cancelTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jaW-N5-uvH"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="cJ9-Ey-j6P" firstAttribute="width" secondItem="bs7-ed-HWB" secondAttribute="width" id="why-2s-Dzx"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="slw-ox-HrN" secondAttribute="trailing" id="1VK-mG-I63"/>
+                                            <constraint firstItem="2Pd-wh-gaP" firstAttribute="leading" secondItem="QiU-jb-wec" secondAttribute="leading" id="Csz-i7-2NW"/>
+                                            <constraint firstItem="slw-ox-HrN" firstAttribute="leading" secondItem="QiU-jb-wec" secondAttribute="leading" id="JZe-zb-LnF"/>
+                                            <constraint firstAttribute="trailing" secondItem="2Pd-wh-gaP" secondAttribute="trailing" id="MB5-Uh-Mjr"/>
+                                            <constraint firstItem="Nal-bC-TKd" firstAttribute="leading" secondItem="QiU-jb-wec" secondAttribute="leading" id="RPP-Cv-cIU"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nal-bC-TKd" secondAttribute="trailing" id="fXE-ch-Xgm"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6te-jW-cgz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Yn-9w-haE"/>
+                            <constraint firstItem="6te-jW-cgz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ApB-0O-JwB"/>
+                            <constraint firstItem="0Re-Va-oSO" firstAttribute="width" secondItem="6te-jW-cgz" secondAttribute="width" id="ZAj-Yj-NsY"/>
+                            <constraint firstItem="0Re-Va-oSO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kdP-sc-43c"/>
+                            <constraint firstItem="0Re-Va-oSO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rXX-Ou-Cgo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="delayDurationLabel" destination="q1r-l5-0HI" id="UDZ-kr-6ZB"/>
+                        <outlet property="delayDurationSlider" destination="4uK-jN-KLa" id="wpu-WJ-Wjp"/>
+                        <outlet property="taskLabel" destination="Nal-bC-TKd" id="Riz-wr-doA"/>
+                        <outlet property="timerProgressView" destination="slw-ox-HrN" id="2Zr-Oz-v0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>
