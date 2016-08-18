@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC4460B51D6653970005ED32 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DC4460B41D6653970005ED32 /* README.md */; };
+		DC4460B71D66539F0005ED32 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = DC4460B61D66539F0005ED32 /* LICENSE.txt */; };
 		DCFEB8271D64085700E5B79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFEB8261D64085700E5B79B /* AppDelegate.swift */; };
 		DCFEB8291D64085700E5B79B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFEB8281D64085700E5B79B /* ViewController.swift */; };
 		DCFEB82C1D64085700E5B79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCFEB82A1D64085700E5B79B /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC4460B41D6653970005ED32 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		DC4460B61D66539F0005ED32 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = SOURCE_ROOT; };
 		DCFEB8231D64085700E5B79B /* DelayedPreemptiveDispatchQueueDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DelayedPreemptiveDispatchQueueDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFEB8261D64085700E5B79B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCFEB8281D64085700E5B79B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				DCFEB82D1D64085700E5B79B /* Assets.xcassets */,
 				DCFEB82F1D64085700E5B79B /* LaunchScreen.storyboard */,
 				DCFEB8321D64085700E5B79B /* Info.plist */,
+				DC4460B41D6653970005ED32 /* README.md */,
+				DC4460B61D66539F0005ED32 /* LICENSE.txt */,
 			);
 			path = DelayedPreemptiveDispatchQueueDemo;
 			sourceTree = "<group>";
@@ -187,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4460B71D66539F0005ED32 /* LICENSE.txt in Resources */,
 				DCFEB8311D64085700E5B79B /* LaunchScreen.storyboard in Resources */,
 				DCFEB82E1D64085700E5B79B /* Assets.xcassets in Resources */,
 				DCFEB82C1D64085700E5B79B /* Main.storyboard in Resources */,
@@ -209,6 +216,7 @@
 			files = (
 				DCFEB8291D64085700E5B79B /* ViewController.swift in Sources */,
 				DCFEB84C1D64090500E5B79B /* DelayedPreemptiveDispatchQueue.swift in Sources */,
+				DC4460B51D6653970005ED32 /* README.md in Sources */,
 				DCFEB8271D64085700E5B79B /* AppDelegate.swift in Sources */,
 				DCFEB84D1D64090500E5B79B /* ProgressViewTimer.swift in Sources */,
 			);
@@ -420,6 +428,7 @@
 				DCFEB8421D64085700E5B79B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCFEB8431D64085700E5B79B /* Build configuration list for PBXNativeTarget "DelayedPreemptiveDispatchQueueDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +437,7 @@
 				DCFEB8451D64085700E5B79B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
